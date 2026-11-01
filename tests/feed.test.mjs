@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {validateExchangeQuote,requireExecutableQuote} from '../lib/feed.ts';
+const now=Date.parse('2026-10-21T06:00:00Z');const quote={symbol:'TEST',last:10000,bid:9990,ask:10010,exchangeTime:new Date(now-1000).toISOString(),receivedTime:new Date(now-500).toISOString(),session:'2026-10-21',marketState:'open',officialOpen:9900,officialClose:null,source:'test fixture'};
+test('fresh quotes retain official close as unavailable and use correct execution side',()=>{assert.equal(validateExchangeQuote(quote,now).officialClose,null);assert.equal(requireExecutableQuote(quote,'buy',now),10010);assert.equal(requireExecutableQuote(quote,'sell',now),9990);});
+test('stale, future, closed and missing-side quotes cannot execute',()=>{assert.throws(()=>requireExecutableQuote(quote,'buy',now+61000),/stale/);assert.throws(()=>requireExecutableQuote({...quote,marketState:'closed'},'buy',now),/closed/);assert.throws(()=>requireExecutableQuote({...quote,ask:null},'buy',now),/missing/);assert.throws(()=>validateExchangeQuote({...quote,exchangeTime:new Date(now+60000).toISOString()},now),/timestamps/);});

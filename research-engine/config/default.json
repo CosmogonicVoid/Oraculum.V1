@@ -1,0 +1,28 @@
+{
+  "weights": {
+    "momentum": 0.15,
+    "trend": 0.1,
+    "volume_confirmation": 0.1,
+    "profitability": 0.15,
+    "growth": 0.1,
+    "leverage": 0.1,
+    "valuation": 0.1,
+    "news": 0.1,
+    "announcements": 0.1
+  },
+  "candidate_threshold": 65.0,
+  "minimum_coverage": 0.7,
+  "missing_data_penalty": 15.0,
+  "volatility_penalty": 10.0,
+  "volatility_penalty_starts": 0.2,
+  "volatility_penalty_full": 0.6,
+  "maximum_volatility": 0.8,
+  "minimum_turnover_inr": 10000000.0,
+  "maximum_debt_to_equity": 2.0,
+  "maximum_price_age_days": 7,
+  "maximum_fundamental_available_age_days": 200,
+  "maximum_fundamental_observation_age_days": 550,
+  "maximum_news_age_days": 7,
+  "maximum_announcement_age_days": 14,
+  "top_n": 10
+}

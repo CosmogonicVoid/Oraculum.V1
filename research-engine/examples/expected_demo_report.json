@@ -1,0 +1,2049 @@
+{
+  "schema_version": 1,
+  "run_id": "7b3771f67835e89051787f86517c6e80d9ff530d9d39cb9acdfc515d3a130430",
+  "input_sha256": "25c10a97608b4bf0f17f9ad70149563fda459dee70a8327228b22371befbf500",
+  "config_sha256": "e110564c1097a01304e46feb34b269afa3182b6e673b24999b5298b8dbe946fa",
+  "engine_version": "0.1.0",
+  "algorithm_version": "bounded-factor-baseline-v1",
+  "generated_at": "2026-10-09T12:00:00Z",
+  "as_of": "2026-10-09T12:00:00Z",
+  "last_session": "2026-10-09",
+  "mode": "synthetic",
+  "dataset_id": "oraculum-fictional-v1",
+  "score_kind": "dimensionless_unvalidated_baseline",
+  "counts": {
+    "candidate": 2,
+    "watch": 2,
+    "excluded": 4
+  },
+  "shortlist": [
+    "NSE:SIM-ASTER",
+    "NSE:SIM-BANYAN"
+  ],
+  "abstained": false,
+  "decisions": [
+    {
+      "instrument_id": "NSE:SIM-ASTER",
+      "sector": "industrials",
+      "score": 79.0,
+      "coverage": 1.0,
+      "status": "candidate",
+      "factors": [
+        {
+          "factor": "momentum",
+          "weight": 0.15,
+          "normalized": 0.7999999999999999,
+          "points": 5.999999999999999,
+          "values": {
+            "momentum_20d": 0.08
+          },
+          "source_ids": [
+            "demo-prices"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "trend",
+          "weight": 0.1,
+          "normalized": 0.6,
+          "points": 3.0,
+          "values": {
+            "trend_50d": 0.06
+          },
+          "source_ids": [
+            "demo-prices"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "volume_confirmation",
+          "weight": 0.1,
+          "normalized": 0.4,
+          "points": 2.0,
+          "values": {
+            "volume_ratio_20d": 1.8,
+            "momentum_20d": 0.08
+          },
+          "source_ids": [
+            "demo-prices"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "profitability",
+          "weight": 0.15,
+          "normalized": 0.6,
+          "points": 4.5,
+          "values": {
+            "roce": 0.26
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "growth",
+          "weight": 0.1,
+          "normalized": 0.6,
+          "points": 3.0,
+          "values": {
+            "revenue_growth_yoy": 0.22
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "leverage",
+          "weight": 0.1,
+          "normalized": 0.6,
+          "points": 3.0,
+          "values": {
+            "debt_to_equity": 0.4
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "valuation",
+          "weight": 0.1,
+          "normalized": 0.3999999999999999,
+          "points": 1.9999999999999996,
+          "values": {
+            "pe_to_sector_median": 0.8
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "news",
+          "weight": 0.1,
+          "normalized": 0.6,
+          "points": 3.0,
+          "values": {
+            "news_sentiment": 0.6
+          },
+          "source_ids": [
+            "demo-news"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "announcements",
+          "weight": 0.1,
+          "normalized": 0.7,
+          "points": 3.5,
+          "values": {
+            "announcement_impact": 0.7
+          },
+          "source_ids": [
+            "demo-announcements"
+          ],
+          "unavailable_reason": null
+        }
+      ],
+      "missing_penalty": 0.0,
+      "risk_penalty": 0.9999999999999997,
+      "reasons": [
+        "momentum: +6.00 score points (momentum_20d=0.08)",
+        "profitability: +4.50 score points (roce=0.26)",
+        "announcements: +3.50 score points (announcement_impact=0.7)"
+      ],
+      "counterarguments": [
+        "Volatility penalty: -1.00 points"
+      ],
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "instrument_id": "NSE:SIM-BANYAN",
+      "sector": "technology",
+      "score": 68.0,
+      "coverage": 0.8,
+      "status": "candidate",
+      "factors": [
+        {
+          "factor": "momentum",
+          "weight": 0.15,
+          "normalized": 0.6,
+          "points": 4.5,
+          "values": {
+            "momentum_20d": 0.06
+          },
+          "source_ids": [
+            "demo-prices"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "trend",
+          "weight": 0.1,
+          "normalized": 0.6,
+          "points": 3.0,
+          "values": {
+            "trend_50d": 0.06
+          },
+          "source_ids": [
+            "demo-prices"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "volume_confirmation",
+          "weight": 0.1,
+          "normalized": 0.4,
+          "points": 2.0,
+          "values": {
+            "volume_ratio_20d": 1.8,
+            "momentum_20d": 0.06
+          },
+          "source_ids": [
+            "demo-prices"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "profitability",
+          "weight": 0.15,
+          "normalized": 0.6,
+          "points": 4.5,
+          "values": {
+            "roce": 0.26
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "growth",
+          "weight": 0.1,
+          "normalized": 0.6,
+          "points": 3.0,
+          "values": {
+            "revenue_growth_yoy": 0.22
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "leverage",
+          "weight": 0.1,
+          "normalized": 0.6,
+          "points": 3.0,
+          "values": {
+            "debt_to_equity": 0.4
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "valuation",
+          "weight": 0.1,
+          "normalized": 0.3999999999999999,
+          "points": 1.9999999999999996,
+          "values": {
+            "pe_to_sector_median": 0.8
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "news",
+          "weight": 0.1,
+          "normalized": null,
+          "points": 0.0,
+          "values": {
+            "news_sentiment": null
+          },
+          "source_ids": [],
+          "unavailable_reason": "news_sentiment: missing"
+        },
+        {
+          "factor": "announcements",
+          "weight": 0.1,
+          "normalized": null,
+          "points": 0.0,
+          "values": {
+            "announcement_impact": null
+          },
+          "source_ids": [],
+          "unavailable_reason": "announcement_impact: missing"
+        }
+      ],
+      "missing_penalty": 2.999999999999999,
+      "risk_penalty": 0.9999999999999997,
+      "reasons": [
+        "momentum: +4.50 score points (momentum_20d=0.06)",
+        "profitability: +4.50 score points (roce=0.26)",
+        "growth: +3.00 score points (revenue_growth_yoy=0.22)"
+      ],
+      "counterarguments": [
+        "Missing or stale factors: -3.00 points",
+        "Volatility penalty: -1.00 points"
+      ],
+      "blockers": [],
+      "warnings": [
+        "news: news_sentiment: missing",
+        "announcements: announcement_impact: missing"
+      ]
+    },
+    {
+      "instrument_id": "NSE:SIM-CEDAR",
+      "sector": "consumer",
+      "score": 50.0,
+      "coverage": 1.0,
+      "status": "watch",
+      "factors": [
+        {
+          "factor": "momentum",
+          "weight": 0.15,
+          "normalized": 0.0,
+          "points": 0.0,
+          "values": {
+            "momentum_20d": 0.0
+          },
+          "source_ids": [
+            "demo-prices"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "trend",
+          "weight": 0.1,
+          "normalized": 0.0,
+          "points": 0.0,
+          "values": {
+            "trend_50d": 0.0
+          },
+          "source_ids": [
+            "demo-prices"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "volume_confirmation",
+          "weight": 0.1,
+          "normalized": 0,
+          "points": 0.0,
+          "values": {
+            "volume_ratio_20d": 1.0,
+            "momentum_20d": 0.0
+          },
+          "source_ids": [
+            "demo-prices"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "profitability",
+          "weight": 0.15,
+          "normalized": 0.0,
+          "points": 0.0,
+          "values": {
+            "roce": 0.2
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "growth",
+          "weight": 0.1,
+          "normalized": 0.0,
+          "points": 0.0,
+          "values": {
+            "revenue_growth_yoy": 0.1
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "leverage",
+          "weight": 0.1,
+          "normalized": 0.0,
+          "points": 0.0,
+          "values": {
+            "debt_to_equity": 1.0
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "valuation",
+          "weight": 0.1,
+          "normalized": 0.0,
+          "points": 0.0,
+          "values": {
+            "pe_to_sector_median": 1.0
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "news",
+          "weight": 0.1,
+          "normalized": 0.0,
+          "points": 0.0,
+          "values": {
+            "news_sentiment": 0.0
+          },
+          "source_ids": [
+            "demo-news"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "announcements",
+          "weight": 0.1,
+          "normalized": 0.0,
+          "points": 0.0,
+          "values": {
+            "announcement_impact": 0.0
+          },
+          "source_ids": [
+            "demo-announcements"
+          ],
+          "unavailable_reason": null
+        }
+      ],
+      "missing_penalty": 0.0,
+      "risk_penalty": 0.0,
+      "reasons": [
+        "No positively contributing factors"
+      ],
+      "counterarguments": [],
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "instrument_id": "NSE:SIM-DUNE",
+      "sector": "materials",
+      "score": 31.0,
+      "coverage": 1.0,
+      "status": "watch",
+      "factors": [
+        {
+          "factor": "momentum",
+          "weight": 0.15,
+          "normalized": -1.0,
+          "points": -7.5,
+          "values": {
+            "momentum_20d": -0.1
+          },
+          "source_ids": [
+            "demo-prices"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "trend",
+          "weight": 0.1,
+          "normalized": -0.7999999999999999,
+          "points": -3.9999999999999996,
+          "values": {
+            "trend_50d": -0.08
+          },
+          "source_ids": [
+            "demo-prices"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "volume_confirmation",
+          "weight": 0.1,
+          "normalized": -1,
+          "points": -5.0,
+          "values": {
+            "volume_ratio_20d": 3.0,
+            "momentum_20d": -0.1
+          },
+          "source_ids": [
+            "demo-prices"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "profitability",
+          "weight": 0.15,
+          "normalized": 0.6,
+          "points": 4.5,
+          "values": {
+            "roce": 0.26
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "growth",
+          "weight": 0.1,
+          "normalized": 0.6,
+          "points": 3.0,
+          "values": {
+            "revenue_growth_yoy": 0.22
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "leverage",
+          "weight": 0.1,
+          "normalized": 0.6,
+          "points": 3.0,
+          "values": {
+            "debt_to_equity": 0.4
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "valuation",
+          "weight": 0.1,
+          "normalized": 0.3999999999999999,
+          "points": 1.9999999999999996,
+          "values": {
+            "pe_to_sector_median": 0.8
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "news",
+          "weight": 0.1,
+          "normalized": -0.7,
+          "points": -3.5,
+          "values": {
+            "news_sentiment": -0.7
+          },
+          "source_ids": [
+            "demo-news"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "announcements",
+          "weight": 0.1,
+          "normalized": -0.8,
+          "points": -4.0,
+          "values": {
+            "announcement_impact": -0.8
+          },
+          "source_ids": [
+            "demo-announcements"
+          ],
+          "unavailable_reason": null
+        }
+      ],
+      "missing_penalty": 0.0,
+      "risk_penalty": 7.5,
+      "reasons": [
+        "profitability: +4.50 score points (roce=0.26)",
+        "growth: +3.00 score points (revenue_growth_yoy=0.22)",
+        "leverage: +3.00 score points (debt_to_equity=0.4)"
+      ],
+      "counterarguments": [
+        "momentum: -7.50 score points (momentum_20d=-0.1)",
+        "volume_confirmation: -5.00 score points (volume_ratio_20d=3, momentum_20d=-0.1)",
+        "announcements: -4.00 score points (announcement_impact=-0.8)",
+        "Volatility penalty: -7.50 points"
+      ],
+      "blockers": [],
+      "warnings": []
+    },
+    {
+      "instrument_id": "NSE:SIM-EMBER",
+      "sector": "energy",
+      "score": 79.0,
+      "coverage": 1.0,
+      "status": "excluded",
+      "factors": [
+        {
+          "factor": "momentum",
+          "weight": 0.15,
+          "normalized": 0.7999999999999999,
+          "points": 5.999999999999999,
+          "values": {
+            "momentum_20d": 0.08
+          },
+          "source_ids": [
+            "demo-prices"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "trend",
+          "weight": 0.1,
+          "normalized": 0.6,
+          "points": 3.0,
+          "values": {
+            "trend_50d": 0.06
+          },
+          "source_ids": [
+            "demo-prices"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "volume_confirmation",
+          "weight": 0.1,
+          "normalized": 0.4,
+          "points": 2.0,
+          "values": {
+            "volume_ratio_20d": 1.8,
+            "momentum_20d": 0.08
+          },
+          "source_ids": [
+            "demo-prices"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "profitability",
+          "weight": 0.15,
+          "normalized": 0.6,
+          "points": 4.5,
+          "values": {
+            "roce": 0.26
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "growth",
+          "weight": 0.1,
+          "normalized": 0.6,
+          "points": 3.0,
+          "values": {
+            "revenue_growth_yoy": 0.22
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "leverage",
+          "weight": 0.1,
+          "normalized": 0.6,
+          "points": 3.0,
+          "values": {
+            "debt_to_equity": 0.4
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "valuation",
+          "weight": 0.1,
+          "normalized": 0.3999999999999999,
+          "points": 1.9999999999999996,
+          "values": {
+            "pe_to_sector_median": 0.8
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "news",
+          "weight": 0.1,
+          "normalized": 0.6,
+          "points": 3.0,
+          "values": {
+            "news_sentiment": 0.6
+          },
+          "source_ids": [
+            "demo-news"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "announcements",
+          "weight": 0.1,
+          "normalized": 0.7,
+          "points": 3.5,
+          "values": {
+            "announcement_impact": 0.7
+          },
+          "source_ids": [
+            "demo-announcements"
+          ],
+          "unavailable_reason": null
+        }
+      ],
+      "missing_penalty": 0.0,
+      "risk_penalty": 0.9999999999999997,
+      "reasons": [
+        "momentum: +6.00 score points (momentum_20d=0.08)",
+        "profitability: +4.50 score points (roce=0.26)",
+        "announcements: +3.50 score points (announcement_impact=0.7)"
+      ],
+      "counterarguments": [
+        "Volatility penalty: -1.00 points",
+        "Average daily turnover below the configured liquidity floor"
+      ],
+      "blockers": [
+        "Average daily turnover below the configured liquidity floor"
+      ],
+      "warnings": []
+    },
+    {
+      "instrument_id": "NSE:SIM-GROVE",
+      "sector": "financials",
+      "score": 79.0,
+      "coverage": 1.0,
+      "status": "excluded",
+      "factors": [
+        {
+          "factor": "momentum",
+          "weight": 0.15,
+          "normalized": 0.7999999999999999,
+          "points": 5.999999999999999,
+          "values": {
+            "momentum_20d": 0.08
+          },
+          "source_ids": [
+            "demo-prices"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "trend",
+          "weight": 0.1,
+          "normalized": 0.6,
+          "points": 3.0,
+          "values": {
+            "trend_50d": 0.06
+          },
+          "source_ids": [
+            "demo-prices"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "volume_confirmation",
+          "weight": 0.1,
+          "normalized": 0.4,
+          "points": 2.0,
+          "values": {
+            "volume_ratio_20d": 1.8,
+            "momentum_20d": 0.08
+          },
+          "source_ids": [
+            "demo-prices"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "profitability",
+          "weight": 0.15,
+          "normalized": 0.6,
+          "points": 4.5,
+          "values": {
+            "roce": 0.26
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "growth",
+          "weight": 0.1,
+          "normalized": 0.6,
+          "points": 3.0,
+          "values": {
+            "revenue_growth_yoy": 0.22
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "leverage",
+          "weight": 0.1,
+          "normalized": 0.6,
+          "points": 3.0,
+          "values": {
+            "debt_to_equity": 0.4
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "valuation",
+          "weight": 0.1,
+          "normalized": 0.3999999999999999,
+          "points": 1.9999999999999996,
+          "values": {
+            "pe_to_sector_median": 0.8
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "news",
+          "weight": 0.1,
+          "normalized": 0.6,
+          "points": 3.0,
+          "values": {
+            "news_sentiment": 0.6
+          },
+          "source_ids": [
+            "demo-news"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "announcements",
+          "weight": 0.1,
+          "normalized": 0.7,
+          "points": 3.5,
+          "values": {
+            "announcement_impact": 0.7
+          },
+          "source_ids": [
+            "demo-announcements"
+          ],
+          "unavailable_reason": null
+        }
+      ],
+      "missing_penalty": 0.0,
+      "risk_penalty": 0.9999999999999997,
+      "reasons": [
+        "momentum: +6.00 score points (momentum_20d=0.08)",
+        "profitability: +4.50 score points (roce=0.26)",
+        "announcements: +3.50 score points (announcement_impact=0.7)"
+      ],
+      "counterarguments": [
+        "Volatility penalty: -1.00 points",
+        "Financial-sector accounting requires a separate quality model"
+      ],
+      "blockers": [
+        "Financial-sector accounting requires a separate quality model"
+      ],
+      "warnings": []
+    },
+    {
+      "instrument_id": "NSE:SIM-HARBOR",
+      "sector": "industrials",
+      "score": 70.0,
+      "coverage": 1.0,
+      "status": "excluded",
+      "factors": [
+        {
+          "factor": "momentum",
+          "weight": 0.15,
+          "normalized": 0.7999999999999999,
+          "points": 5.999999999999999,
+          "values": {
+            "momentum_20d": 0.08
+          },
+          "source_ids": [
+            "demo-prices"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "trend",
+          "weight": 0.1,
+          "normalized": 0.6,
+          "points": 3.0,
+          "values": {
+            "trend_50d": 0.06
+          },
+          "source_ids": [
+            "demo-prices"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "volume_confirmation",
+          "weight": 0.1,
+          "normalized": 0.4,
+          "points": 2.0,
+          "values": {
+            "volume_ratio_20d": 1.8,
+            "momentum_20d": 0.08
+          },
+          "source_ids": [
+            "demo-prices"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "profitability",
+          "weight": 0.15,
+          "normalized": 0.6,
+          "points": 4.5,
+          "values": {
+            "roce": 0.26
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "growth",
+          "weight": 0.1,
+          "normalized": 0.6,
+          "points": 3.0,
+          "values": {
+            "revenue_growth_yoy": 0.22
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "leverage",
+          "weight": 0.1,
+          "normalized": 0.6,
+          "points": 3.0,
+          "values": {
+            "debt_to_equity": 0.4
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "valuation",
+          "weight": 0.1,
+          "normalized": 0.3999999999999999,
+          "points": 1.9999999999999996,
+          "values": {
+            "pe_to_sector_median": 0.8
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "news",
+          "weight": 0.1,
+          "normalized": 0.6,
+          "points": 3.0,
+          "values": {
+            "news_sentiment": 0.6
+          },
+          "source_ids": [
+            "demo-news"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "announcements",
+          "weight": 0.1,
+          "normalized": 0.7,
+          "points": 3.5,
+          "values": {
+            "announcement_impact": 0.7
+          },
+          "source_ids": [
+            "demo-announcements"
+          ],
+          "unavailable_reason": null
+        }
+      ],
+      "missing_penalty": 0.0,
+      "risk_penalty": 10.0,
+      "reasons": [
+        "momentum: +6.00 score points (momentum_20d=0.08)",
+        "profitability: +4.50 score points (roce=0.26)",
+        "announcements: +3.50 score points (announcement_impact=0.7)"
+      ],
+      "counterarguments": [
+        "Volatility penalty: -10.00 points",
+        "Volatility exceeds the configured ceiling"
+      ],
+      "blockers": [
+        "Volatility exceeds the configured ceiling"
+      ],
+      "warnings": []
+    },
+    {
+      "instrument_id": "NSE:SIM-FERN",
+      "sector": "healthcare",
+      "score": 54.75,
+      "coverage": 0.45,
+      "status": "excluded",
+      "factors": [
+        {
+          "factor": "momentum",
+          "weight": 0.15,
+          "normalized": 0.7999999999999999,
+          "points": 5.999999999999999,
+          "values": {
+            "momentum_20d": 0.08
+          },
+          "source_ids": [
+            "demo-prices"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "trend",
+          "weight": 0.1,
+          "normalized": 0.6,
+          "points": 3.0,
+          "values": {
+            "trend_50d": 0.06
+          },
+          "source_ids": [
+            "demo-prices"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "volume_confirmation",
+          "weight": 0.1,
+          "normalized": 0.4,
+          "points": 2.0,
+          "values": {
+            "volume_ratio_20d": 1.8,
+            "momentum_20d": 0.08
+          },
+          "source_ids": [
+            "demo-prices"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "profitability",
+          "weight": 0.15,
+          "normalized": null,
+          "points": 0.0,
+          "values": {
+            "roce": null
+          },
+          "source_ids": [],
+          "unavailable_reason": "roce: missing"
+        },
+        {
+          "factor": "growth",
+          "weight": 0.1,
+          "normalized": null,
+          "points": 0.0,
+          "values": {
+            "revenue_growth_yoy": null
+          },
+          "source_ids": [],
+          "unavailable_reason": "revenue_growth_yoy: missing"
+        },
+        {
+          "factor": "leverage",
+          "weight": 0.1,
+          "normalized": 0.6,
+          "points": 3.0,
+          "values": {
+            "debt_to_equity": 0.4
+          },
+          "source_ids": [
+            "demo-fundamentals"
+          ],
+          "unavailable_reason": null
+        },
+        {
+          "factor": "valuation",
+          "weight": 0.1,
+          "normalized": null,
+          "points": 0.0,
+          "values": {
+            "pe_to_sector_median": null
+          },
+          "source_ids": [],
+          "unavailable_reason": "pe_to_sector_median: missing"
+        },
+        {
+          "factor": "news",
+          "weight": 0.1,
+          "normalized": null,
+          "points": 0.0,
+          "values": {
+            "news_sentiment": null
+          },
+          "source_ids": [],
+          "unavailable_reason": "news_sentiment: missing"
+        },
+        {
+          "factor": "announcements",
+          "weight": 0.1,
+          "normalized": null,
+          "points": 0.0,
+          "values": {
+            "announcement_impact": null
+          },
+          "source_ids": [],
+          "unavailable_reason": "announcement_impact: missing"
+        }
+      ],
+      "missing_penalty": 8.25,
+      "risk_penalty": 0.9999999999999997,
+      "reasons": [
+        "momentum: +6.00 score points (momentum_20d=0.08)",
+        "leverage: +3.00 score points (debt_to_equity=0.4)",
+        "trend: +3.00 score points (trend_50d=0.06)"
+      ],
+      "counterarguments": [
+        "Missing or stale factors: -8.25 points",
+        "Volatility penalty: -1.00 points",
+        "Factor coverage below the configured minimum"
+      ],
+      "blockers": [
+        "Factor coverage below the configured minimum"
+      ],
+      "warnings": [
+        "profitability: roce: missing",
+        "growth: revenue_growth_yoy: missing",
+        "valuation: pe_to_sector_median: missing",
+        "news: news_sentiment: missing",
+        "announcements: announcement_impact: missing"
+      ]
+    }
+  ],
+  "limitations": [
+    "This is an untrained research baseline, not a probability or expected-return forecast.",
+    "Candidates are paper-research signals; no trading or brokerage integration exists.",
+    "Source timestamps are checked as supplied; vendor truth and historical vintages require independent verification.",
+    "The exchange session calendar and universe membership must come from the provider.",
+    "Correlated factors can double-count information; weights and thresholds are research hypotheses.",
+    "Missing data is penalized; coverage measures completeness, not predictive confidence.",
+    "All instruments and figures in this run are fictional fixtures."
+  ],
+  "input": {
+    "schema_version": 1,
+    "dataset_id": "oraculum-fictional-v1",
+    "mode": "synthetic",
+    "as_of": "2026-10-09T12:00:00Z",
+    "last_session": "2026-10-09",
+    "session_close_at": "2026-10-09T10:00:00Z",
+    "sources": [
+      {
+        "id": "demo-announcements",
+        "kind": "announcement",
+        "title": "Fictional announcement fixture; not a real source",
+        "uri": "fixture://oraculum/demo-announcements",
+        "published_at": "2026-10-07T06:00:00Z",
+        "available_at": "2026-10-07T06:00:00Z",
+        "content_sha256": null
+      },
+      {
+        "id": "demo-fundamentals",
+        "kind": "fundamentals",
+        "title": "Fictional fundamentals fixture; not a real source",
+        "uri": "fixture://oraculum/demo-fundamentals",
+        "published_at": "2026-08-12T04:30:00Z",
+        "available_at": "2026-08-12T04:30:00Z",
+        "content_sha256": null
+      },
+      {
+        "id": "demo-news",
+        "kind": "news",
+        "title": "Fictional news fixture; not a real source",
+        "uri": "fixture://oraculum/demo-news",
+        "published_at": "2026-10-08T06:00:00Z",
+        "available_at": "2026-10-08T06:00:00Z",
+        "content_sha256": null
+      },
+      {
+        "id": "demo-prices",
+        "kind": "prices",
+        "title": "Fictional prices fixture; not a real source",
+        "uri": "fixture://oraculum/demo-prices",
+        "published_at": "2026-10-09T10:05:00Z",
+        "available_at": "2026-10-09T10:05:00Z",
+        "content_sha256": null
+      }
+    ],
+    "assets": [
+      {
+        "symbol": "SIM-ASTER",
+        "exchange": "NSE",
+        "sector": "industrials",
+        "session": "2026-10-09",
+        "metrics": {
+          "announcement_impact": {
+            "value": 0.7,
+            "observed_at": "2026-10-07T06:00:00Z",
+            "available_at": "2026-10-07T06:00:00Z",
+            "source_ids": [
+              "demo-announcements"
+            ]
+          },
+          "close_inr": {
+            "value": 250.0,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "debt_to_equity": {
+            "value": 0.4,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "momentum_20d": {
+            "value": 0.08,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "news_sentiment": {
+            "value": 0.6,
+            "observed_at": "2026-10-08T06:00:00Z",
+            "available_at": "2026-10-08T06:00:00Z",
+            "source_ids": [
+              "demo-news"
+            ]
+          },
+          "pe_to_sector_median": {
+            "value": 0.8,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "revenue_growth_yoy": {
+            "value": 0.22,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "roce": {
+            "value": 0.26,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "trend_50d": {
+            "value": 0.06,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "turnover_20d_inr": {
+            "value": 50000000.0,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "volatility_20d_annualized": {
+            "value": 0.24,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "volume_ratio_20d": {
+            "value": 1.8,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          }
+        }
+      },
+      {
+        "symbol": "SIM-BANYAN",
+        "exchange": "NSE",
+        "sector": "technology",
+        "session": "2026-10-09",
+        "metrics": {
+          "announcement_impact": {
+            "value": null,
+            "observed_at": "2026-10-07T06:00:00Z",
+            "available_at": "2026-10-07T06:00:00Z",
+            "source_ids": []
+          },
+          "close_inr": {
+            "value": 250.0,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "debt_to_equity": {
+            "value": 0.4,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "momentum_20d": {
+            "value": 0.06,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "news_sentiment": {
+            "value": null,
+            "observed_at": "2026-10-08T06:00:00Z",
+            "available_at": "2026-10-08T06:00:00Z",
+            "source_ids": []
+          },
+          "pe_to_sector_median": {
+            "value": 0.8,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "revenue_growth_yoy": {
+            "value": 0.22,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "roce": {
+            "value": 0.26,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "trend_50d": {
+            "value": 0.06,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "turnover_20d_inr": {
+            "value": 50000000.0,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "volatility_20d_annualized": {
+            "value": 0.24,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "volume_ratio_20d": {
+            "value": 1.8,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          }
+        }
+      },
+      {
+        "symbol": "SIM-CEDAR",
+        "exchange": "NSE",
+        "sector": "consumer",
+        "session": "2026-10-09",
+        "metrics": {
+          "announcement_impact": {
+            "value": 0.0,
+            "observed_at": "2026-10-07T06:00:00Z",
+            "available_at": "2026-10-07T06:00:00Z",
+            "source_ids": [
+              "demo-announcements"
+            ]
+          },
+          "close_inr": {
+            "value": 250.0,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "debt_to_equity": {
+            "value": 1.0,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "momentum_20d": {
+            "value": 0.0,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "news_sentiment": {
+            "value": 0.0,
+            "observed_at": "2026-10-08T06:00:00Z",
+            "available_at": "2026-10-08T06:00:00Z",
+            "source_ids": [
+              "demo-news"
+            ]
+          },
+          "pe_to_sector_median": {
+            "value": 1.0,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "revenue_growth_yoy": {
+            "value": 0.1,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "roce": {
+            "value": 0.2,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "trend_50d": {
+            "value": 0.0,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "turnover_20d_inr": {
+            "value": 50000000.0,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "volatility_20d_annualized": {
+            "value": 0.2,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "volume_ratio_20d": {
+            "value": 1.0,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          }
+        }
+      },
+      {
+        "symbol": "SIM-DUNE",
+        "exchange": "NSE",
+        "sector": "materials",
+        "session": "2026-10-09",
+        "metrics": {
+          "announcement_impact": {
+            "value": -0.8,
+            "observed_at": "2026-10-07T06:00:00Z",
+            "available_at": "2026-10-07T06:00:00Z",
+            "source_ids": [
+              "demo-announcements"
+            ]
+          },
+          "close_inr": {
+            "value": 250.0,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "debt_to_equity": {
+            "value": 0.4,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "momentum_20d": {
+            "value": -0.1,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "news_sentiment": {
+            "value": -0.7,
+            "observed_at": "2026-10-08T06:00:00Z",
+            "available_at": "2026-10-08T06:00:00Z",
+            "source_ids": [
+              "demo-news"
+            ]
+          },
+          "pe_to_sector_median": {
+            "value": 0.8,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "revenue_growth_yoy": {
+            "value": 0.22,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "roce": {
+            "value": 0.26,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "trend_50d": {
+            "value": -0.08,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "turnover_20d_inr": {
+            "value": 50000000.0,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "volatility_20d_annualized": {
+            "value": 0.5,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "volume_ratio_20d": {
+            "value": 3.0,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          }
+        }
+      },
+      {
+        "symbol": "SIM-EMBER",
+        "exchange": "NSE",
+        "sector": "energy",
+        "session": "2026-10-09",
+        "metrics": {
+          "announcement_impact": {
+            "value": 0.7,
+            "observed_at": "2026-10-07T06:00:00Z",
+            "available_at": "2026-10-07T06:00:00Z",
+            "source_ids": [
+              "demo-announcements"
+            ]
+          },
+          "close_inr": {
+            "value": 250.0,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "debt_to_equity": {
+            "value": 0.4,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "momentum_20d": {
+            "value": 0.08,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "news_sentiment": {
+            "value": 0.6,
+            "observed_at": "2026-10-08T06:00:00Z",
+            "available_at": "2026-10-08T06:00:00Z",
+            "source_ids": [
+              "demo-news"
+            ]
+          },
+          "pe_to_sector_median": {
+            "value": 0.8,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "revenue_growth_yoy": {
+            "value": 0.22,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "roce": {
+            "value": 0.26,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "trend_50d": {
+            "value": 0.06,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "turnover_20d_inr": {
+            "value": 200000.0,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "volatility_20d_annualized": {
+            "value": 0.24,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "volume_ratio_20d": {
+            "value": 1.8,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          }
+        }
+      },
+      {
+        "symbol": "SIM-FERN",
+        "exchange": "NSE",
+        "sector": "healthcare",
+        "session": "2026-10-09",
+        "metrics": {
+          "announcement_impact": {
+            "value": null,
+            "observed_at": "2026-10-07T06:00:00Z",
+            "available_at": "2026-10-07T06:00:00Z",
+            "source_ids": []
+          },
+          "close_inr": {
+            "value": 250.0,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "debt_to_equity": {
+            "value": 0.4,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "momentum_20d": {
+            "value": 0.08,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "news_sentiment": {
+            "value": null,
+            "observed_at": "2026-10-08T06:00:00Z",
+            "available_at": "2026-10-08T06:00:00Z",
+            "source_ids": []
+          },
+          "pe_to_sector_median": {
+            "value": null,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": []
+          },
+          "revenue_growth_yoy": {
+            "value": null,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": []
+          },
+          "roce": {
+            "value": null,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": []
+          },
+          "trend_50d": {
+            "value": 0.06,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "turnover_20d_inr": {
+            "value": 50000000.0,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "volatility_20d_annualized": {
+            "value": 0.24,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "volume_ratio_20d": {
+            "value": 1.8,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          }
+        }
+      },
+      {
+        "symbol": "SIM-GROVE",
+        "exchange": "NSE",
+        "sector": "financials",
+        "session": "2026-10-09",
+        "metrics": {
+          "announcement_impact": {
+            "value": 0.7,
+            "observed_at": "2026-10-07T06:00:00Z",
+            "available_at": "2026-10-07T06:00:00Z",
+            "source_ids": [
+              "demo-announcements"
+            ]
+          },
+          "close_inr": {
+            "value": 250.0,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "debt_to_equity": {
+            "value": 0.4,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "momentum_20d": {
+            "value": 0.08,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "news_sentiment": {
+            "value": 0.6,
+            "observed_at": "2026-10-08T06:00:00Z",
+            "available_at": "2026-10-08T06:00:00Z",
+            "source_ids": [
+              "demo-news"
+            ]
+          },
+          "pe_to_sector_median": {
+            "value": 0.8,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "revenue_growth_yoy": {
+            "value": 0.22,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "roce": {
+            "value": 0.26,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "trend_50d": {
+            "value": 0.06,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "turnover_20d_inr": {
+            "value": 50000000.0,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "volatility_20d_annualized": {
+            "value": 0.24,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "volume_ratio_20d": {
+            "value": 1.8,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          }
+        }
+      },
+      {
+        "symbol": "SIM-HARBOR",
+        "exchange": "NSE",
+        "sector": "industrials",
+        "session": "2026-10-09",
+        "metrics": {
+          "announcement_impact": {
+            "value": 0.7,
+            "observed_at": "2026-10-07T06:00:00Z",
+            "available_at": "2026-10-07T06:00:00Z",
+            "source_ids": [
+              "demo-announcements"
+            ]
+          },
+          "close_inr": {
+            "value": 250.0,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "debt_to_equity": {
+            "value": 0.4,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "momentum_20d": {
+            "value": 0.08,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "news_sentiment": {
+            "value": 0.6,
+            "observed_at": "2026-10-08T06:00:00Z",
+            "available_at": "2026-10-08T06:00:00Z",
+            "source_ids": [
+              "demo-news"
+            ]
+          },
+          "pe_to_sector_median": {
+            "value": 0.8,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "revenue_growth_yoy": {
+            "value": 0.22,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "roce": {
+            "value": 0.26,
+            "observed_at": "2026-06-30T10:00:00Z",
+            "available_at": "2026-08-12T04:30:00Z",
+            "source_ids": [
+              "demo-fundamentals"
+            ]
+          },
+          "trend_50d": {
+            "value": 0.06,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "turnover_20d_inr": {
+            "value": 50000000.0,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "volatility_20d_annualized": {
+            "value": 0.95,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          },
+          "volume_ratio_20d": {
+            "value": 1.8,
+            "observed_at": "2026-10-09T10:00:00Z",
+            "available_at": "2026-10-09T10:05:00Z",
+            "source_ids": [
+              "demo-prices"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "config": {
+    "weights": {
+      "momentum": 0.15,
+      "trend": 0.1,
+      "volume_confirmation": 0.1,
+      "profitability": 0.15,
+      "growth": 0.1,
+      "leverage": 0.1,
+      "valuation": 0.1,
+      "news": 0.1,
+      "announcements": 0.1
+    },
+    "candidate_threshold": 65.0,
+    "minimum_coverage": 0.7,
+    "missing_data_penalty": 15.0,
+    "volatility_penalty": 10.0,
+    "volatility_penalty_starts": 0.2,
+    "volatility_penalty_full": 0.6,
+    "maximum_volatility": 0.8,
+    "minimum_turnover_inr": 10000000.0,
+    "maximum_debt_to_equity": 2.0,
+    "maximum_price_age_days": 7,
+    "maximum_fundamental_available_age_days": 200,
+    "maximum_fundamental_observation_age_days": 550,
+    "maximum_news_age_days": 7,
+    "maximum_announcement_age_days": 14,
+    "top_n": 10
+  }
+}

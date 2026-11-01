@@ -1,0 +1,8 @@
+{
+  "dataset_id": "local-nse-watchlist-v1",
+  "assets": [
+    {"symbol": "TCS", "sector": "technology"},
+    {"symbol": "RELIANCE", "sector": "energy"},
+    {"symbol": "HINDUNILVR", "sector": "consumer"}
+  ]
+}

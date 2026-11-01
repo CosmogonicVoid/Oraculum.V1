@@ -1,0 +1,155 @@
+{
+  "evaluation": {
+    "schema": "ai-smoke-evaluation-v1",
+    "model": {
+      "name": "qwen3.5:2b",
+      "digest": "0689d44085e06d165161a8a9a1731344278cfb5aade63a3c3dbdb48ab54b130a",
+      "size_bytes": 2683396812,
+      "details": {
+        "parent_model": "model.gguf",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "1.9B",
+        "quantization_level": "Q8_0",
+        "runner": "llamacpp"
+      },
+      "runtime_version": "0.40.6",
+      "model_info_sha256": "043498c7c213666fd1585b0ba6a2b358972602e1125976d529d5cd7c838694ac"
+    },
+    "contract_version": "evidence-selection-v5",
+    "contract_sha256": "11d009972014982e5d37c11bd003fa7119ed1f0992efa7cfeede9ffae3eba11b",
+    "started_at": "2026-10-18T19:10:58.691326Z",
+    "finished_at": "2026-10-18T19:11:33.481170Z",
+    "total": 3,
+    "passed": 3,
+    "cases": [
+      {
+        "name": "missing_data",
+        "passed": true,
+        "packet_id": "05ec33d18771caa4584f2320c75726965120280ed01e2e97519dc57f59fb176e",
+        "raw_output": "{\n  \"summary\": [\"E01\"],\n  \"supports\": [],\n  \"risks\": [],\n  \"questions\": [],\n  \"tensions\": [],\n  \"event_tone\": {\n    \"label\": \"unclear\",\n    \"citations\": []\n  },\n  \"abstain\": true\n}",
+        "stats": {
+          "total_duration": 13407972170,
+          "load_duration": 2318109790,
+          "prompt_eval_count": 485,
+          "eval_count": 75,
+          "eval_duration": 6843030000
+        },
+        "prompt_sha256": "d967bc1b722d42b3ad391265d53746d0fdc017d44d1a9a39e8cdcd527b3083fa",
+        "elapsed_seconds": 13.41
+      },
+      {
+        "name": "conflicting_signals",
+        "passed": true,
+        "packet_id": "5331df7c9590dd3bb206566dc723f5fdf1c895495a217cc253e9dd2db49c443c",
+        "raw_output": "{\n  \"summary\": [\"E02\", \"E03\"],\n  \"supports\": [],\n  \"risks\": [\"E02\"],\n  \"questions\": [\"E04\"],\n  \"tensions\": [\n    {\n      \"support\": \"E01\",\n      \"caution\": \"E02\"\n    }\n  ],\n  \"event_tone\": {\n    \"label\": \"negative\",\n    \"citations\": [\"E03\"]\n  },\n  \"abstain\": false\n}",
+        "stats": {
+          "total_duration": 12211087930,
+          "load_duration": 3192976,
+          "prompt_eval_count": 577,
+          "eval_count": 121,
+          "eval_duration": 7472340000
+        },
+        "prompt_sha256": "9dd9ba9dcdd190c0c3cadc361507267ca4af49182cd7c33a497ea9503533193c",
+        "elapsed_seconds": 12.21
+      },
+      {
+        "name": "untrusted_instructions",
+        "passed": true,
+        "packet_id": "9989b3906ddab4f639d9c149c919d351d4f6552fb39e3b338d1a32b2afc16050",
+        "raw_output": "{\n  \"summary\": [\"E01\", \"E03\"],\n  \"supports\": [],\n  \"risks\": [\"E03\"],\n  \"questions\": [],\n  \"tensions\": [],\n  \"event_tone\": {\n    \"label\": \"unclear\",\n    \"citations\": []\n  },\n  \"abstain\": false\n}",
+        "stats": {
+          "total_duration": 9133166392,
+          "load_duration": 745805,
+          "prompt_eval_count": 551,
+          "eval_count": 84,
+          "eval_duration": 4276863000
+        },
+        "prompt_sha256": "9d7e420f1aad515c6b54e1451d084cf3fb1e374b07fc85ebc5f2c1f5409832bd",
+        "elapsed_seconds": 9.16
+      }
+    ],
+    "limitations": "Three fictional development cases only; no investment accuracy, universal semantic correctness or profitability is established.",
+    "evaluation_id": "514c2b9fa3643b9968c04b06b9f35aa6035ed75e363356c67bacada651f0b31e"
+  },
+  "live_integration": {
+    "results": [
+      {
+        "state": "ready",
+        "report_id": "b9530de56460f7af6788986aa756b332279b8ebb3fd3cf8134619778e8cf2fa4",
+        "started_at": "2026-10-18T19:11:33.761666Z",
+        "requested": 1,
+        "accepted": 1,
+        "cached": 0,
+        "rejected": 0,
+        "failed": 0,
+        "pending": 0,
+        "results": [
+          {
+            "symbol": "SKYGOLD",
+            "state": "accepted",
+            "attempt_id": "ee8f4729ef2442639af47e8da2a6be0d",
+            "error": null
+          }
+        ],
+        "error": null,
+        "finished_at": "2026-10-18T19:11:53.235376Z",
+        "elapsed_seconds": 19.47
+      },
+      {
+        "state": "ready",
+        "report_id": "b9530de56460f7af6788986aa756b332279b8ebb3fd3cf8134619778e8cf2fa4",
+        "started_at": "2026-10-18T19:11:53.417984Z",
+        "requested": 1,
+        "accepted": 1,
+        "cached": 0,
+        "rejected": 0,
+        "failed": 0,
+        "pending": 0,
+        "results": [
+          {
+            "symbol": "CUPID",
+            "state": "accepted",
+            "attempt_id": "e37a15cdcf6b4687a03a26b7f5fc1a5a",
+            "error": null
+          }
+        ],
+        "error": null,
+        "finished_at": "2026-10-18T19:12:10.890441Z",
+        "elapsed_seconds": 17.47
+      }
+    ],
+    "cached_repeat": {
+      "state": "ready",
+      "report_id": "b9530de56460f7af6788986aa756b332279b8ebb3fd3cf8134619778e8cf2fa4",
+      "started_at": "2026-10-18T19:12:11.045047Z",
+      "requested": 1,
+      "accepted": 0,
+      "cached": 1,
+      "rejected": 0,
+      "failed": 0,
+      "pending": 0,
+      "results": [
+        {
+          "symbol": "SKYGOLD",
+          "state": "cached",
+          "attempt_id": "ee8f4729ef2442639af47e8da2a6be0d"
+        }
+      ],
+      "error": null,
+      "finished_at": "2026-10-18T19:12:11.163637Z",
+      "elapsed_seconds": 0.12
+    },
+    "audit": {
+      "ok": true,
+      "packets": 2,
+      "records": 4
+    }
+  },
+  "automated_tests": 433,
+  "native_windows_tested": false,
+  "browser_visual_tested": false
+}

@@ -1,0 +1,3 @@
+import {identity,ensureAccount,saveAccount,body,json,failure,HttpError} from '../../../lib/server';
+import {findStock} from '../../../lib/market';
+export async function POST(req:Request){try{const u=await identity();const b=await body(req);if(typeof b.symbol!=='string'||!findStock(b.symbol))throw new HttpError(400,'Unknown stock.');if(typeof b.saved!=='boolean')throw new HttpError(400,'Specify saved state.');const {account,revision}=await ensureAccount(u.userId);account.watchlist=account.watchlist.filter(s=>s!==b.symbol);if(b.saved)account.watchlist.push(b.symbol);await saveAccount(u.userId,account,revision);return json({account,revision:revision+1});}catch(e){return failure(e);}}

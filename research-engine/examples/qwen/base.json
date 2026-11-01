@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "dataset_id": "oraculum-qwen-fixture-v1",
+  "mode": "synthetic",
+  "as_of": "2026-10-09T12:00:00Z",
+  "last_session": "2026-10-09",
+  "session_close_at": "2026-10-09T10:00:00Z",
+  "sources": [
+    {
+      "id": "qw-prices",
+      "kind": "prices",
+      "title": "Synthetic Qwen fixture price tape; not real market data",
+      "uri": "fixture://oraculum-qwen/prices",
+      "published_at": "2026-10-09T10:05:00Z",
+      "available_at": "2026-10-09T10:05:00Z",
+      "content_sha256": null
+    },
+    {
+      "id": "qw-fundamentals",
+      "kind": "fundamentals",
+      "title": "Synthetic Qwen fixture fundamentals; not real filings",
+      "uri": "fixture://oraculum-qwen/fundamentals",
+      "published_at": "2026-08-12T04:30:00Z",
+      "available_at": "2026-08-12T04:30:00Z",
+      "content_sha256": null
+    }
+  ],
+  "assets": [
+    {
+      "symbol": "QW-ALPHA",
+      "exchange": "NSE",
+      "sector": "industrials",
+      "session": "2026-10-09",
+      "metrics": {
+        "roce": {"value": 0.26, "observed_at": "2026-06-30T10:00:00Z", "available_at": "2026-08-12T04:30:00Z", "source_ids": ["qw-fundamentals"]},
+        "revenue_growth_yoy": {"value": 0.22, "observed_at": "2026-06-30T10:00:00Z", "available_at": "2026-08-12T04:30:00Z", "source_ids": ["qw-fundamentals"]},
+        "debt_to_equity": {"value": 0.4, "observed_at": "2026-06-30T10:00:00Z", "available_at": "2026-08-12T04:30:00Z", "source_ids": ["qw-fundamentals"]},
+        "pe_to_sector_median": {"value": 0.8, "observed_at": "2026-06-30T10:00:00Z", "available_at": "2026-08-12T04:30:00Z", "source_ids": ["qw-fundamentals"]}
+      }
+    },
+    {
+      "symbol": "QW-BETA",
+      "exchange": "NSE",
+      "sector": "consumer",
+      "session": "2026-10-09",
+      "metrics": {
+        "debt_to_equity": {"value": 0.5, "observed_at": "2026-06-30T10:00:00Z", "available_at": "2026-08-12T04:30:00Z", "source_ids": ["qw-fundamentals"]}
+      }
+    },
+    {
+      "symbol": "QW-GAMMA",
+      "exchange": "NSE",
+      "sector": "materials",
+      "session": "2026-10-09",
+      "metrics": {}
+    }
+  ]
+}

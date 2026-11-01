@@ -1,0 +1,8 @@
+[project]
+name = "oraculum-core"
+version = "0.1.0"
+description = "Local reproducible paper-only stock research core"
+requires-python = ">=3.12"
+dependencies = []
+
+# Run from this folder with python -m oraculum. No pip installation is required.

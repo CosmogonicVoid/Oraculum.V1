@@ -1,0 +1,33 @@
+{
+  "id": "nse-2021-cc0-v1",
+  "sources": [
+    {
+      "dataset": "https://www.kaggle.com/datasets/rohanrao/nifty50-stock-market-data",
+      "license": "CC0: Public Domain (declared by dataset publisher)",
+      "archive_sha256": "d7b57b118e0c7702a46bbfce5446cdd5cc970d3615f42d29d968c90420e46df3"
+    },
+    {
+      "dataset": "https://www.kaggle.com/datasets/vinay20/stock-market-nse-indices-daily-data2000",
+      "license": "CC0: Public Domain (declared by dataset publisher)",
+      "archive_sha256": "a6fb281eb88cde684da3a95f08e938cdc9f0d63b66b65d8af1781431088fb7e0"
+    }
+  ],
+  "history_start": "2017-01-02",
+  "history_end": "2021-04-30",
+  "replay_start": "2021-01-04",
+  "replay_end": "2021-04-30",
+  "benchmark": "NIFTY 50 price index (NIFTY in source)",
+  "included_stocks": 49,
+  "excluded": [
+    {
+      "symbol": "INFRATEL",
+      "reason": "Empty source file"
+    }
+  ],
+  "limitations": [
+    "2021-era constituent selection creates survivorship and selection bias.",
+    "Raw OHLC prices; dividends and corporate actions are not modeled. Large discontinuities are excluded from model windows, not repaired.",
+    "Historical simulation created now; these are not forecasts published in 2021.",
+    "No current market feed, no guaranteed predictive edge, no investment recommendations."
+  ]
+}

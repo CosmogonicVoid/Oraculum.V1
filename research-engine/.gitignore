@@ -1,0 +1,21 @@
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+data/
+reports/
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+dist/
+build/
+*.egg-info/
+*.log
+*.zip
+MANIFEST.sha256
+
+# Private dated real-market report included only in the user delivery
+validation/
